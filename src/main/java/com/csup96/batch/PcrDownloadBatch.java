@@ -31,7 +31,7 @@ public class PcrDownloadBatch {
 	private final HospitalRepository hospitalRepository;
 
 	// 초 분 시 일 월 주
-	@Scheduled(cron = "0 34 * * * *", zone = "Asia/Seoul") // 매 시간 마다 실행
+	@Scheduled(cron = "0 39 * * * *", zone = "Asia/Seoul") // 매 시간 마다 실행
 	public void startBatch() {
 		// 1. URL 주소 만들기 - totalCount 확인용
 		String totalCountCheckURL = "http://apis.data.go.kr/B551182/rprtHospService/getRprtHospService?serviceKey=CzmrpkHb4vk8oXPXFGWL7pBA8v2L1uSeYlWx%2FeUf%2ByV0LdGtBWkYxvCpWEC4llWtLhNoV6QzlAKSLOuhU%2F%2BhLw%3D%3D&pageNo=1&numOfRows=2&_type=json";
