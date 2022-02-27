@@ -10,7 +10,7 @@
 	});
 
 	let getHospital = async (sidoCdNm, sgguCdNm) => {		
-		let resp = await fetch(`http://localhost:8000/api/hospital?sidoCdNm=${sidoCdNm}&sgguCdNm=${sgguCdNm}`);
+		let resp = await fetch(`http://localhost:5000/api/hospital?sidoCdNm=${sidoCdNm}&sgguCdNm=${sgguCdNm}`);
 		let respPasing = await resp.json();
 		
 		//console.log(respPasing);
@@ -68,7 +68,7 @@
 	}
 
 	let getSgguCdNm = async (sidoCdNm) => {
-		let resp = await fetch(`http://localhost:8000/api/sgguCdNm?sidoCdNm=${sidoCdNm}`);
+		let resp = await fetch(`http://localhost:5000/api/sgguCdNm?sidoCdNm=${sidoCdNm}`);
 		let respPasing = await resp.json();
 		//console.log(respPasing);
 		setSgguCdNm(respPasing);
